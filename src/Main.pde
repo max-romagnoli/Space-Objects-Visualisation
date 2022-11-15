@@ -41,41 +41,41 @@ void setup(){
   test_date();
   mouseDir = 0.0; 
   init_FileSortedByMass(spaceObjects);
-} //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+}
 
 void draw() {
-  currentScreen.loop(mouseX,mouseY, mouseDir*scrollMultiplier); //<>// //<>//
-  currentScreen.draw(); //<>// //<>// //<>// //<>// //<>//
-}  //<>// //<>// //<>// //<>//
- //<>// //<>//
-public void mousePressed() { //<>// //<>//
-  currentScreen.parseEvent(); //<>// //<>//
-} //<>// //<>// //<>// //<>//
- //<>// //<>//
-public void mouseReleased() { //<>// //<>//
-  currentScreen.checkReleaseEvents(); //<>// //<>//
-}  //<>// //<>//
- //<>// //<>//
-void mouseWheel(MouseEvent event){ //<>// //<>// //<>// //<>//
-  if (event.getCount() >= 1) //<>// //<>//
-    mouseDir = 1; //<>// //<>//
-  else if (event.getCount() <= -1) //<>// //<>//
-    mouseDir = -1; //<>// //<>//
-  else mouseDir = 0; //<>// //<>//
-} //<>// //<>//
- //<>// //<>//
-public void mouseDragged() { //<>// //<>//
-  if(prevChartCap != chartCap) { //<>// //<>//
-   prevChartCap = chartCap; //<>// //<>//
-   setCharts(-15); //<>// //<>//
-  } //<>// //<>//
-   segmentNumber.updateLabel("Segments Displayed: " + chartCap); //<>// //<>//
-  } //<>// //<>//
- //<>// //<>//
-void keyPressed() { //<>// //<>//
-  if(focus!=null) //<>// //<>//
-  { //<>// //<>//
-    if(key!=CODED) //<>// //<>//
-      focus.append(key); //<>// //<>//
-    } //<>// //<>//
-} //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+  currentScreen.loop(mouseX,mouseY, mouseDir*scrollMultiplier);
+  currentScreen.draw();
+}
+
+public void mousePressed() {
+  currentScreen.parseEvent();
+}
+
+public void mouseReleased() {
+  currentScreen.checkReleaseEvents();
+}
+
+void mouseWheel(MouseEvent event){
+  if (event.getCount() >= 1)
+    mouseDir = 1;
+  else if (event.getCount() <= -1)
+    mouseDir = -1;
+  else mouseDir = 0;
+}
+
+public void mouseDragged() {
+  if(prevChartCap != chartCap) {
+   prevChartCap = chartCap;
+   setCharts(-15);
+  }
+   segmentNumber.updateLabel("Segments Displayed: " + chartCap);
+  }
+
+void keyPressed() {
+  if(focus!=null)
+  { 
+    if(key!=CODED) 
+      focus.append(key); 
+    } 
+} 
