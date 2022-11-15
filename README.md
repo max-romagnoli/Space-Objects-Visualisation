@@ -2,7 +2,7 @@
 This is a copy of the repository of my first year capstone group project.
 
 ABOUT:
-Space Objects Visualisation allows the user to interactively explore and visualise a large dataset of data regarding the objects that have ever been launched during the space age.
+Space Objects Visualisation allows the user to interactively explore and visualise a large dataset of the objects launched during the space age.
 This includes interactive and dinamically resizable charts, customisable searching and sorting, graphical visualisations.
 Significant care has been put into designing a visually compelling as well as functional GUI.
 
